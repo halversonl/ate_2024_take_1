@@ -57,7 +57,7 @@ ROOT_URLCONF = 'ate_2024_take_1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/Users/leohalverson/dev/geapi_django_2/ate_2024_take_1/templates/homepage.html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
