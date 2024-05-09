@@ -18,10 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from hello.views import index
 from pages.views import homepage_view, about_view
+from activity_input.views import activity_example_view, activity_input_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', index),
-    path('home/', homepage_view, name='home'),
-    path('about/', about_view)
+    path('', homepage_view, name='home'),
+    path('about/', about_view),
+    path('example/', activity_example_view),
+    path('upload/', activity_input_view)
 ]
