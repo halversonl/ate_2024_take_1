@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Activity
 from .forms import ActivityInputForm
@@ -15,9 +15,10 @@ def activity_example_view(request):
 
 
 def activity_input_view(request):
-    form = ActivityInputForm(request.POST or None)
+    form = ActivityInputForm(request.POST, request.FILES)
     if form.is_valid():
         form.save()
+        form = ActivityInputForm
 
     context = {
         'form': form
