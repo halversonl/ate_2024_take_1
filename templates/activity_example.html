@@ -1,2 +1,7 @@
-<h1>{{ title }}</h1>
-<p>{{ description }}</p>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <h2>{{ date }}</h2>
+    <p>{{ description }}</p>
+{% endblock %}
